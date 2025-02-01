@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Project Overview
 
-## Available Scripts
+This application is a React.js-based platform used to manage stock data, receipts, and expenditures, communicating with a backend via REST API.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Display stock list
+- Add expenditure data
+- Add receipt data
+- Check expenditure details by transaction number
+- Check receipt details by transaction number
+- Dynamic navigation in the dashboard
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React.js
+- **Backend API:** REST API (using Axios for HTTP requests)
+- **Styling:** CSS
 
-### `npm test`
+## 🔧 Installation & Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/yogi-dekanata/ui_minimla_api
+   cd ui_minimla_api
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run the application**
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+## 📡 API Endpoints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This application communicates with the backend via the following endpoints:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📌 Stock Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Get all stocks:** `GET http://localhost:8080/stocks`
 
-### `npm run eject`
+### 📌 Expenditure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Add Expenditure:** `POST http://localhost:8080/pengeluaran`
+- **Check Expenditure:** `GET http://localhost:8080/pengeluaran/{trxOutNo}`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📌 Receipt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Add Receipt:** `POST http://localhost:8080/penerimaan`
+- **Check Receipt:** `GET http://localhost:8080/penerimaan/{trxInNo}`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📜 File Structure
 
-## Learn More
+```
+/src
+│-- App.js           # React entry point
+│-- index.js         # Root file
+│-- Dashboard.js     # Main dashboard component
+│-- StockList.js     # Displays stock list
+│-- PengeluaranForm.js  # Expenditure form
+│-- PenerimaanForm.js   # Receipt form
+│-- CekPengeluaranForm.js  # Check expenditure by transaction number
+│-- CekPenerimaanForm.js   # Check receipt by transaction number
+│-- App.css          # Styling
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contributing
 
-### Code Splitting
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Commit changes (`git commit -m 'Added feature X'`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Create a pull request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📄 License
 
-### Analyzing the Bundle Size
+MIT License - Feel free to use it as needed!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
