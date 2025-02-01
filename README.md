@@ -34,6 +34,11 @@ This application is a React.js-based platform used to manage stock data, receipt
    ```bash
    npm start
    ```
+3. **Access the application
+Open your browser and go to:**
+   ```bash
+   http://localhost:3000/
+   ```
 
 ## 📡 API Endpoints
 
